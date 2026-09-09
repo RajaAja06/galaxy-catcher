@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Galaxy Catcher, game menangkap bintang karya Muhammad Raja Yusuf Sudibdya.">
+  <title>Galaxy Catcher</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">ARCADE MINI GAME</p>
+        <h1>Galaxy Catcher</h1>
+      </div>
+      <button id="soundButton" class="icon-button" type="button" aria-label="Aktifkan atau matikan suara">🔊</button>
+    </header>
+
+    <section class="stats" aria-label="Statistik permainan">
+      <div class="stat"><span>SKOR</span><strong id="score">0</strong></div>
+      <div class="stat"><span>LEVEL</span><strong id="level">1</strong></div>
+      <div class="stat"><span>NYAWA</span><strong id="lives">❤ ❤ ❤</strong></div>
+      <div class="stat"><span>TERBAIK</span><strong id="highScore">0</strong></div>
+    </section>
+
+    <section class="game-frame">
+      <canvas id="gameCanvas" width="900" height="520" aria-label="Area permainan Galaxy Catcher"></canvas>
+
+      <div id="startScreen" class="game-overlay">
+        <div class="planet-logo" aria-hidden="true">🪐</div>
+        <h2>Kumpulkan Bintang!</h2>
+        <p>Tangkap <b>bintang kuning</b>, ambil kristal bonus, dan hindari meteor.</p>
+        <button id="startButton" class="primary-button" type="button">Mulai Bermain</button>
+        <small>Gunakan tombol ← → atau A dan D</small>
+      </div>
+
+      <div id="gameOverScreen" class="game-overlay hidden">
+        <p class="eyebrow">MISI SELESAI</p>
+        <h2>Game Over</h2>
+        <p>Skor akhir kamu: <strong id="finalScore">0</strong></p>
+        <p id="newRecord" class="record hidden">🏆 Rekor baru!</p>
+        <button id="restartButton" class="primary-button" type="button">Main Lagi</button>
+      </div>
+
+      <button id="pauseButton" class="pause-button hidden" type="button">Jeda</button>
+    </section>
+
+    <section class="mobile-controls" aria-label="Kontrol layar sentuh">
+      <button id="leftButton" type="button" aria-label="Bergerak ke kiri">←</button>
+      <button id="rightButton" type="button" aria-label="Bergerak ke kanan">→</button>
+    </section>
+
+    <footer>
+      <span>Dibuat oleh Muhammad Raja Yusuf Sudibdya</span>
+      <span>XI PPLG 3 • SMK Telkom Purwokerto</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
